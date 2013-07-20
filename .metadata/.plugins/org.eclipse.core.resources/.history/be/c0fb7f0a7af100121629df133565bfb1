@@ -1,0 +1,30 @@
+package com.briodek.playable;
+
+import android.os.Bundle;
+import android.widget.*;
+import android.animation.ObjectAnimator;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.ViewPropertyAnimator;
+
+public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        HorizontalScrollView hv = (HorizontalScrollView)findViewById(R.id.horizontalScrollView1);
+        ObjectAnimator ani = ObjectAnimator.ofFloat(hv, "X", 0f 3200f);
+        
+        
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    
+}
