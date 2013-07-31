@@ -31,6 +31,21 @@ public class MainActivity extends Activity {
         ani.addListener(new animationMapControl(findViewById(R.id.linearLayout1)));
         ani.start();
         
+        //float x = 200;
+        //float y = 200;
+        String imageRes[] = new String[4];// "android.resource://com.briodek.playable/drawable/bizlocation";
+        imageRes[0] ="android.resource://com.briodek.playable/drawable/bizlocation";
+        float[] x = {505,700,500,600};
+        float[] y ={186,200,300,400};
+        for(int i=0;i<1;i++)
+        {
+        	ImageButton Ib = new ImageButton(this);
+        	//Ib.setBackgroundResource(R.drawable.bizlocation);
+        	Ib.setImageURI(Uri.parse(imageRes[i]));
+        	Ib.setY(y[i]);
+        	Ib.setX(x[i]);
+        	LV.addView(Ib, 150, 150);
+        }
         
     }
 
