@@ -92,23 +92,27 @@ public class MainActivity extends Activity {
     	ImageButton Controller = (ImageButton)findViewById(R.id.controller_a_1);
     	Controller.setOnClickListener(new View.OnClickListener() {
 			
-			@SuppressLint("NewApi")
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				HorizontalScrollView LV = (HorizontalScrollView)findViewById(R.id.horizontalScrollView1);
-				LV.setScrollX(LV.getScrollX()+300);
+				//LV.setScrollX(LV.getScrollX()+300);
+				int x = LV.getScrollX()+300;
+				float y = LV.getY();
+				LV.scrollTo(x, (int)y);
 			}
 		});
     	ImageButton Controller_2 = (ImageButton)findViewById(R.id.controller_a_2);
     	Controller_2.setOnClickListener(new View.OnClickListener() {
 			
-			@SuppressLint("NewApi")
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				HorizontalScrollView LV = (HorizontalScrollView)findViewById(R.id.horizontalScrollView1);
-				LV.setScrollX(LV.getScrollX()-300);
+				//LV.setScrollX(LV.getScrollX()-300);
+				int x = LV.getScrollX()-300;
+				float y = LV.getY();
+				LV.scrollTo(x, (int)y);
 			}
 		});
     }
