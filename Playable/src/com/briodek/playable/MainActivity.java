@@ -5,12 +5,14 @@ import android.os.Bundle;
 import android.widget.*;
 import android.animation.ObjectAnimator;
 import android.animation.TypeEvaluator;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.Menu;
+import android.view.View;
 
 public class MainActivity extends Activity {
 
@@ -42,7 +44,7 @@ public class MainActivity extends Activity {
         imageRes[2] ="android.resource://com.briodek.playable/drawable/start_arrow";
         imageRes[3] ="android.resource://com.briodek.playable/drawable/neon_a";
         imageRes[4] ="android.resource://com.briodek.playable/drawable/neon_b";
-        float[] x = {505,558,440,800};
+        float[] x = {405,458,340,800};
         float[] y ={186,166,140,400};
         for(int i=0;i<2;i++)
         {
@@ -87,7 +89,28 @@ public class MainActivity extends Activity {
         //airplaneAnim.addListener(new planeAnimationControl(findViewById(R.id.airplane)));
     	NeonAnim.start();
     	*/
-    	
+    	ImageButton Controller = (ImageButton)findViewById(R.id.controller_a_1);
+    	Controller.setOnClickListener(new View.OnClickListener() {
+			
+			@SuppressLint("NewApi")
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				HorizontalScrollView LV = (HorizontalScrollView)findViewById(R.id.horizontalScrollView1);
+				LV.setScrollX(LV.getScrollX()+300);
+			}
+		});
+    	ImageButton Controller_2 = (ImageButton)findViewById(R.id.controller_a_2);
+    	Controller_2.setOnClickListener(new View.OnClickListener() {
+			
+			@SuppressLint("NewApi")
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				HorizontalScrollView LV = (HorizontalScrollView)findViewById(R.id.horizontalScrollView1);
+				LV.setScrollX(LV.getScrollX()-300);
+			}
+		});
     }
 
 

@@ -46,7 +46,22 @@
             
         </HorizontalScrollView>
 
-        
-        
+		<ImageButton
+		    android:id="@+id/controller_a_1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="261dp"
+		    android:layout_marginTop="350dp"
+		    android:clickable="true"
+		    android:src="@drawable/control_a_1" />
+
+		<ImageButton
+		    android:id="@+id/controller_a_2"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="200dp"
+		    android:layout_marginTop="350dp"
+		    android:clickable="true"
+		    android:src="@drawable/control_a_2" />
             
 </RelativeLayout>
