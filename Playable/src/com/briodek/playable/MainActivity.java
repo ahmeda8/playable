@@ -3,14 +3,9 @@ package com.briodek.playable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.*;
-import android.animation.Animator;
-import android.animation.Animator.AnimatorListener;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
-import android.graphics.drawable.Drawable;
 import android.view.Menu;
-import android.view.ViewPropertyAnimator;
-import android.view.animation.Animation.AnimationListener;
 
 public class MainActivity extends Activity {
 
@@ -21,9 +16,10 @@ public class MainActivity extends Activity {
         
         LinearLayout LV = (LinearLayout)findViewById(R.id.linearLayout1);
         ObjectAnimator airplaneAnim = ObjectAnimator.ofFloat(findViewById(R.id.airplane), "X", 0f,3000f);
-        airplaneAnim.setRepeatMode(ObjectAnimator.INFINITE);
+        airplaneAnim.setRepeatCount(-1);
+        airplaneAnim.setRepeatMode(ObjectAnimator.REVERSE);
         airplaneAnim.setDuration(10000);
-        airplaneAnim.addListener(new planeAnimationControl(findViewById(R.id.airplane)));
+        //airplaneAnim.addListener(new planeAnimationControl(findViewById(R.id.airplane)));
         airplaneAnim.start();
         
         ObjectAnimator ani = ObjectAnimator.ofFloat(findViewById(R.id.linearLayout1), "X", 0f,-3000f);
