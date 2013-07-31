@@ -14,18 +14,39 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout1"
-                android:layout_width="3636dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/map"
                 android:orientation="horizontal" >
 
                 <ImageView
-                    android:id="@+id/airplane"
+                android:id="@+id/airplane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/airplane" />
+                
+                <ImageView
+                    android:id="@+id/town_logo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
-                    android:src="@drawable/airplane" />
+                    android:layout_marginLeft="-220dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/town_logo" />
+        
+        <ImageView
+            android:id="@+id/town_ino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-280dp"
+            android:layout_marginTop="250dp"
+            android:src="@drawable/town_ino" />
                 
             </LinearLayout>
-        </HorizontalScrollView>    
+            
+        </HorizontalScrollView>
+
+        
+        
+            
 </RelativeLayout>
